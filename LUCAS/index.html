@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Acompanhamento de treinos</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="titulo">Acompanhamento de treinos</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Meus Alunos</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do aluno">
+				<table>
+					<thead id="headtabela">
+						<tr>
+							<th>Data Início</th>
+							<th>Nome</th>
+							<th>Exercício</th>
+							<th>Repetições</th>
+							<th>Carga</th>
+							<th>Carga Inicial</th>
+							<th>Descanso</th>
+							<th>Descanso entre Seções</th>
+							<th>Data Fim</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-alunos">
+						<tr class="aluno" id="primeiro-aluno" >
+							<td class="info-data-ini">2022-04-29T15:30</td>
+							<td class="info-nome">Paulo</td>
+							<td class="info-exercicio">Supilho</td>
+							<td class="info-repeticoes">10</td>
+							<td class="info-carga">13</td>
+							<td class="info-carga-ini">10</td>
+							<td class="info-descanso">30</td>
+							<td class="info-descanso-entre-secoes">10</td>
+							<td class="info-data-fim">2022-04-29T15:30</td>
+						</tr>
+
+						<tr class="aluno" id="primeiro-aluno" >
+							<td class="info-data-ini">2022-04-29T15:30</td>
+							<td class="info-nome">Paulo</td>
+							<td class="info-exercicio">Supilho</td>
+							<td class="info-repeticoes">10</td>
+							<td class="info-carga">13</td>
+							<td class="info-carga-ini">10</td>
+							<td class="info-descanso">30</td>
+							<td class="info-descanso-entre-secoes">10</td>
+							<td class="info-data-fim">2022-04-29T15:30</td>
+						</tr>
+						
+						<tr class="aluno" id="primeiro-aluno" >
+							<td class="info-data-ini">2022-04-29T15:30</td>
+							<td class="info-nome">Paulo</td>
+							<td class="info-exercicio">Supilho</td>
+							<td class="info-repeticoes">10</td>
+							<td class="info-carga">13</td>
+							<td class="info-carga-ini">10</td>
+							<td class="info-descanso">30</td>
+							<td class="info-descanso-entre-secoes">10</td>
+							<td class="info-data-fim">2022-04-29T15:30</td>
+						</tr>
+						
+						<tr class="aluno" id="primeiro-aluno" >
+							<td class="info-data-ini">2022-04-29T15:30</td>
+							<td class="info-nome">Paulo</td>
+							<td class="info-exercicio">Supilho</td>
+							<td class="info-repeticoes">10</td>
+							<td class="info-carga">13</td>
+							<td class="info-carga-ini">10</td>
+							<td class="info-descanso">30</td>
+							<td class="info-descanso-entre-secoes">10</td>
+							<td class="info-data-fim">2022-04-29T15:30</td>
+						</tr>
+
+
+					</tbody>
+				</table>
+				<div class="btn-group">
+					<button onclick="export2csv()">csv</button>
+				</div>
+			</section>
+		</main>
+		<section class="container">
+			<h2 id="titulo-form">Adicionar treino</h2>
+			<ul id="mensagens-erro">
+				<li></li>
+			</ul>
+			<form id="form-adiciona">
+				<div class="grupo">
+					<label for="dataIni">Data Inicial:</label>
+					<input id="dataIni" name="dataIni" type="datetime-local" placeholder="preencha 2020-02-23" data-form-date >
+				</div>
+				<div class="grupo">
+					<label for="nome">Nome:</label>
+					<input id="nome" name="nome" type="text" placeholder="digite o nome do Aluno" class="campo">
+				</div>
+				<div class="grupo">
+					<label for="exercicio">Exercício:</label>
+					<input id="exercicio" name="exercicio" type="text" placeholder="digite Exercício" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="repeticoes">Repetições:</label>
+					<input id="repeticoes" name="repeticoes" type="number" placeholder="digite as Repetições" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="carga">Carga:</label>
+					<input id="carga" name="carga" type="number" placeholder="digite a Carga" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="cargaIni">Carga Inicial:</label>
+					<input id="cargaIni" name="cargaIni" type="number" placeholder="digite a Carga Inicial" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="descanso">Descanso:</label>
+					<input id="descanso" name="descanso" type="number"  placeholder="digite a Descanso" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="descansoSec">Descanso entre Seções:</label>
+					<input id="descansoSec" name="descansoSec" type="number"  placeholder="digite a Descanso entre Seções" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="dataFinal">Data Final:</label>
+					<input id="dataFinal" name="dataFinal" type="datetime-local" placeholder="preencha 2020-02-23" data-form-date >
+				</div>
+				<button id="adicionar-aluno" class="botao bto-principal">Adicionar</button>
+			</form>
+		</section>
+		<script src="js/form.js" ></script>
+		<script src="js/remover-aluno.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/exportacsv.js">	</script>
+	</body>
+</html>
