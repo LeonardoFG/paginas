@@ -1,3 +1,15 @@
+:root {
+  --cor-primaria: #0071ea;
+  --cor-secundaria: #d6eaff;
+  --cor-contraste-escuro: #4D4D4D;
+  --cor-contraste-claro: #fff;
+  --cor-aviso: #df2525;
+  --cor-sucesso: #047900;
+  --cor-transparencia: #4d4d4d33;
+
+  --sombra: 0 5px 10px #55a6ff38;
+}
+
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
@@ -70,3 +82,27 @@ form {
       width: 100%;
     }
   }
+
+  .input-container--invalido {
+    margin-bottom: 0.5rem;
+}
+
+.input-container--invalido .input {
+    border: 1px solid var(--cor-aviso);
+    border-radius: 7px;
+}
+
+.input-container--invalido .input-label {
+    color: var(--cor-aviso);
+}
+
+.input-mensagem-erro {
+    display: none;
+}
+
+.input-container--invalido .input-mensagem-erro {
+    color: var(--cor-aviso);
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}

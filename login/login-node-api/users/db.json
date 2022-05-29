@@ -1,0 +1,25 @@
+{
+  "profile": [
+    { 
+      "id": 1,
+      "username": "teste1@mail.com",
+      "password": "Qwerty1",
+      "firstName": "Test",
+      "lastName": "1"
+    },
+    { 
+      "id": 2,
+      "username": "teste2@mail.com",
+      "password": "Qwerty2",
+      "firstName": "Test",
+      "lastName": "2"
+    },
+    { 
+      "id": 3,
+      "username": "teste3@mail.com",
+      "password": "Qwerty3",
+      "firstName": "Test",
+      "lastName": "3"
+    }
+  ]
+}
